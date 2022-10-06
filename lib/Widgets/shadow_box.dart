@@ -14,7 +14,8 @@ class _ShadowBoxState extends State<ShadowBox> {
   Widget build(BuildContext context) {
     ScreenUtil.init(context);
     return Container(
-      padding: EdgeInsets.all(8.r),
+      margin: EdgeInsets.symmetric(horizontal:5,vertical:5),
+      // padding: EdgeInsets.all(8.r),
       child: widget.child,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12.r),
@@ -23,11 +24,11 @@ class _ShadowBoxState extends State<ShadowBox> {
             BoxShadow(
                 color: Colors.grey.shade500,
                 offset: Offset(5.w, 5.h),
-                blurRadius: 15.r),
+                blurRadius: 5.r),
             BoxShadow(
-                color: Colors.white,
+                color: Color.fromARGB(190, 255, 255, 255),
                 offset: Offset(-5.w, -5.h),
-                blurRadius: 15.r),
+                blurRadius: 5.r),
           ]),
     );
   }
